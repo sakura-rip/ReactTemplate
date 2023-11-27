@@ -1,9 +1,17 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+
+import theme from "@/theme.tsx";
+
+const router = createBrowserRouter([]);
+
 function App() {
   return (
-    <div>
-        F-JET
-    </div>
-  )
+    <ThemeProvider theme={theme}>
+      <CssBaseline></CssBaseline>
+      <RouterProvider router={router} />
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
